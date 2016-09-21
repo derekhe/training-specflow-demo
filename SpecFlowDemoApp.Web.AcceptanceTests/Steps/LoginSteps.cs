@@ -13,12 +13,12 @@ namespace SpecFlowDemoApp.Web.AcceptanceTests.Steps
     [Binding]
     class LoginSteps
     {
-        IWebDriver driver = new OpenQA.Selenium.IE.InternetExplorerDriver();
+        private IWebDriver driver = new OpenQA.Selenium.IE.InternetExplorerDriver();
 
-        [Given("I am at the 'Login' page")]
-        public void GivenIAmAtTheLoginPage()
+        [Given("I am at the '(.*)' page")]
+        public void GivenIAmAtTheLoginPage(string pageName)
         {
-            driver.Navigate().GoToUrl("http://localhost:9876/authentication/login");
+            driver.Navigate().GoToUrl(Context.PageNameUrlMap[pageName]);
         }
 
         [When("I fill in the following form")]
@@ -35,10 +35,10 @@ namespace SpecFlowDemoApp.Web.AcceptanceTests.Steps
             }
         }
 
-        [When("I click the 'Login' button")]
-        public void AndIClickTheLoginButton()
+        [When("I click the '(.*)' button")]
+        public void AndIClickTheLoginButton(string buttonName)
         {
-            var loginButton = driver.FindElement(By.Name("Login"));
+            var loginButton = driver.FindElement(By.Name(buttonName));
 
             if (!loginButton.Displayed)
                 Assert.Fail("Expected to find a button with the value of 'Login'.");
@@ -46,11 +46,12 @@ namespace SpecFlowDemoApp.Web.AcceptanceTests.Steps
             loginButton.Click();
         }
 
-        [Then("I should be at the 'Home' page")]
-        public void ThenIShouldBeAtTheHomePage()
+        [Then("I should be at the '(.*)' page")]
+        public void ThenIShouldBeAtTheHomePage(string pageName)
         {
-            var expectedURL = "http://localhost:9876/";
+            var expectedURL = Context.PageNameUrlMap[pageName];
             var actualURL = driver.Url;
+            driver.Close();
             Assert.AreEqual(expectedURL, actualURL);
         }
     }
