@@ -90,6 +90,34 @@ testRunner.Then("I should be at the \'Home\' page", ((string)(null)), ((TechTalk
             this.ScenarioCleanup();
         }
         
+        [TechTalk.SpecRun.ScenarioAttribute("Logging in with invlaid credentials", SourceLine=11)]
+        public virtual void LoggingInWithInvlaidCredentials()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logging in with invlaid credentials", ((string[])(null)));
+#line 12
+this.ScenarioSetup(scenarioInfo);
+#line 13
+testRunner.Given("I am at the \'Login\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "field",
+                        "value"});
+            table2.AddRow(new string[] {
+                        "Username",
+                        "testuser"});
+            table2.AddRow(new string[] {
+                        "Password",
+                        "badpassword"});
+#line 14
+testRunner.When("I fill in the following form", ((string)(null)), table2, "When ");
+#line 18
+testRunner.And("I click the \'Login\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+testRunner.Then("I should be at the \'Login\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [TechTalk.SpecRun.TestRunCleanup()]
         public virtual void TestRunCleanup()
         {

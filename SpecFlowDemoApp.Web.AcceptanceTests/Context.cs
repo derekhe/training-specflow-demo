@@ -6,7 +6,7 @@ namespace SpecFlowDemoApp.Web.AcceptanceTests
     {
         public static Dictionary<string, string> PageNameUrlMap = new Dictionary<string, string>
         {
-            {"Login", "http://localhost:9876/authentication/login"},
+            {"Login", "http://localhost:9876/Authentication/Login"},
             {"Home", "http://localhost:9876/"}
         };
     }
