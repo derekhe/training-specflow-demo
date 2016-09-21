@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "User Profile";
+}
+
+
+<form class="form-horizontal well span5 offset3" method="post" action="#">
+  <h2>User Profile</h2>
+  
+  <p>This form doesn't really do anything useful. But it's a more complicated form to test against Spec Flow.</p>
+  
+  <div class="control-group">
+    <label class="control-label">Name</label>
+    <div class="controls">
+      <input name="Name" />
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Average Grade Letter</label>
+    <div class="controls">
+      <select>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Geek</label>
+    <div class="controls">
+      <label>
+        <input type="radio" name="Geek" value="Yes" />
+        Yes
+      </label>
+      <label>
+        <input type="radio" name="Geek" value="No" />
+        No
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">I am a</label>
+    <div class="controls">
+      <label>
+        <input type="checkbox" name="Traits" />
+        Vegan
+      </label>
+      <label>
+        <input type="checkbox" name="Traits" />
+        Extremist
+      </label>
+      <label>
+        <input type="checkbox" name="Traits" />
+        Liberal
+      </label>
+      <label>
+        <input type="checkbox" name="Traits" />
+        Right-wing
+      </label>
+      <label>
+        <input type="checkbox" name="Traits" />
+        Anarchist
+      </label>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <input type="submit" value="Save" />
+  </div>
+</form>

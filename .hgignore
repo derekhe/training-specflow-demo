@@ -1,0 +1,11 @@
+syntax: glob
+SpecFlowDemoApp.Web.AcceptanceTests/bin/
+SpecFlowDemoApp.Web.AcceptanceTests/obj/
+SpecFlowDemoApp.suo
+SpecFlowDemoApp.Web/bin/
+SpecFlowDemoApp.Web/obj/
+SpecFlowDemoApp.Web/SpecFlowDemoApp.Web.csproj.user
+packages/
+AppHarbor.sln.docstates.suo
+AppHarbor.suo
+SpecFlowDemoApp.sln.docstates.suo
