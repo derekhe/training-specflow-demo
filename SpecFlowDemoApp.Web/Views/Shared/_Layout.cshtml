@@ -9,9 +9,6 @@
     <div class="navbar-inner">
       <div class="container">
         <a class="brand" href="@Url.Content("~/")">Spec Flow Demo App</a>
-        <ul class="nav">
-          <li>@Html.ActionLink("More Complicated Form", "UserProfile", "Home")</li>
-        </ul>
         @if (User.Identity.IsAuthenticated)
         { 
         <ul class="nav pull-right">

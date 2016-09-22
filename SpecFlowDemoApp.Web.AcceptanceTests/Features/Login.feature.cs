@@ -18,7 +18,7 @@ namespace SpecFlowDemoApp.Web.AcceptanceTests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Login", SourceFile="Features\\Login.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("Login", Description="As a user\r\nI want to login\r\nSo that I can see my home screen", SourceFile="Features\\Login.feature", SourceLine=0)]
     public partial class LoginFeature
     {
         
@@ -31,7 +31,7 @@ namespace SpecFlowDemoApp.Web.AcceptanceTests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Login", "", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Login", "As a user\r\nI want to login\r\nSo that I can see my home screen", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -62,13 +62,13 @@ namespace SpecFlowDemoApp.Web.AcceptanceTests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Logging in with valid credentials", SourceLine=2)]
+        [TechTalk.SpecRun.ScenarioAttribute("Logging in with valid credentials", SourceLine=5)]
         public virtual void LoggingInWithValidCredentials()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logging in with valid credentials", ((string[])(null)));
-#line 3
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 4
+#line 7
 testRunner.Given("I am at the \'Login\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -80,40 +80,12 @@ testRunner.Given("I am at the \'Login\' page", ((string)(null)), ((TechTalk.Spec
             table1.AddRow(new string[] {
                         "Password",
                         "testpass"});
-#line 5
+#line 8
 testRunner.When("I fill in the following form", ((string)(null)), table1, "When ");
-#line 9
-testRunner.And("I click the \'Login\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
-testRunner.Then("I should be at the \'Home\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Logging in with invlaid credentials", SourceLine=11)]
-        public virtual void LoggingInWithInvlaidCredentials()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logging in with invlaid credentials", ((string[])(null)));
 #line 12
-this.ScenarioSetup(scenarioInfo);
-#line 13
-testRunner.Given("I am at the \'Login\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "field",
-                        "value"});
-            table2.AddRow(new string[] {
-                        "Username",
-                        "testuser"});
-            table2.AddRow(new string[] {
-                        "Password",
-                        "badpassword"});
-#line 14
-testRunner.When("I fill in the following form", ((string)(null)), table2, "When ");
-#line 18
 testRunner.And("I click the \'Login\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
-testRunner.Then("I should be at the \'Login\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 13
+testRunner.Then("I should be at the \'Home\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
